@@ -33,9 +33,10 @@
           <a class="nav-link" href="/listings">Explore</a>
         </div>
 
+  <!-- Search button -->
         <div class="navbar-nav ms-auto" >
-          <form class="d-flex" role="search">
-            <input class="form-control me-2 search-inp" type="search" placeholder="Search Destinations">
+          <form class="d-flex" role="search" id="searchForm">
+            <input class="form-control me-2 search-inp" id="searchInput" type="search" placeholder="Search Destinations">
             <button class="btn search-btn" type="submit"><i class="fa-solid fa-magnifying-glass"></i>Search</button>
           </form>
         </div>
@@ -54,3 +55,26 @@
       </div>
     </div>
   </nav>
+
+ 
+ <script>
+    // Add an event listener to the form's submit event
+    document.getElementById("searchForm").addEventListener("submit", function(event) {
+       event.preventDefault(); // Prevent the form from submitting traditionally
+       
+       // Get the input value
+       const searchValue = document.getElementById("searchInput").value.trim();
+ 
+       // Perform a check for empty input
+       if (searchValue === "") {
+          alert("Please enter a destination to search.");
+          return; // Exit if no search term is entered
+       }
+ 
+       // Example: Redirect to a search results page with the search query as a URL parameter
+       const searchUrl = '/listings/location/' + encodeURIComponent(searchValue);
+       window.location.href = searchUrl;
+    });
+ </script>
+ 
+  

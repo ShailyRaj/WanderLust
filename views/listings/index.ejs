@@ -47,51 +47,88 @@
             align-items: center;
             margin-bottom: 1.3rem;
         }
+
+        /* filter part */
+        .all-filters a {
+            text-decoration: none;
+            color: black;
+            opacity: 0.7;
+        }
     </style>
 
     <div id="filters">
         <div class="all-filters">
-            <div class="filter">
-                <div><i class="fa-solid fa-fire"></i></div>
-                <p>Trending</p>
-            </div>
-            <div class="filter">
-                <div><i class="fa-solid fa-bed"></i></div>
-                <p>Rooms</p>
-            </div>
-            <div class="filter">
-                <div><i class="fa-solid fa-mountain-city"></i></div>
-                <p>Iconic Cities</p>
-            </div>
-            <div class="filter">
-                <div><i class="fa-solid fa-mountain"></i></div>
-                <p>Mountains</p>
-            </div>
-            <div class="filter">
-                <div><i class="fa-brands fa-fort-awesome"></i></div>
-                <p>Castles</p>
-            </div>
-            <div class="filter">
-                <div><i class="fa-solid fa-person-swimming"></i></div>
-                <p>Amazing Pools</p>
-            </div>
-            <div class="filter">
-                <div><i class="fa-solid fa-campground"></i></div>
-                <p>Camping</p>
-            </div>
-            <div class="filter">
-                <div><i class="fa-solid fa-cow"></i></div>
-                <p>Farms</p>
-            </div>
-            <div class="filter">
-                <div><i class="fa-regular fa-snowflake"></i></div>
-                <p>Arctic</p>
-            </div>
-            <div class="filter">
-                <div><i class="fa-solid fa-landmark-dome"></i></div>
-                <p>Domes</p>
-            </div>
-            <div class="filter">
+            <!-- My editing on filter part -->
+            <a href="/listings/filters/Trending">
+                <div class="filter">
+                    <div><i class="fa-solid fa-fire"></i></div>
+                    <p>Trending</p>
+                </div>
+            </a>
+
+            <a href="/listings/filters/Rooms">
+                <div class="filter">
+                    <div><i class="fa-solid fa-bed"></i></div>
+                    <p>Rooms</p>
+                </div>
+            </a>
+
+            <a href="/listings/filters/Iconic Cities">
+                <div class="filter">
+                    <div><i class="fa-solid fa-mountain-city"></i></div>
+                    <p>Iconic Cities</p>
+                </div>
+            </a>
+
+            <a href="/listings/filters/Mountains">
+                <div class="filter">
+                    <div><i class="fa-solid fa-mountain"></i></div>
+                    <p>Mountains</p>
+                </div>
+            </a>
+
+            <a href="/listings/filters/Castles">
+                <div class="filter">
+                    <div><i class="fa-brands fa-fort-awesome"></i></div>
+                    <p>Castles</p>
+                </div>
+            </a>
+
+            <a href="/listings/filters/Amazing Pools">
+                <div class="filter">
+                    <div><i class="fa-solid fa-person-swimming"></i></div>
+                    <p>Amazing Pools</p>
+                </div>
+            </a>
+
+            <a href="/listings/filters/Camping">
+                <div class="filter">
+                    <div><i class="fa-solid fa-campground"></i></div>
+                    <p>Camping</p>
+                </div>
+            </a>
+                
+            <a href="/listings/filters/Farms">
+                <div class="filter">
+                    <div><i class="fa-solid fa-cow"></i></div>
+                    <p>Farms</p>
+                </div>
+            </a>
+                
+            <a href="/listings/filters/Arctic">
+                <div class="filter">
+                    <div><i class="fa-regular fa-snowflake"></i></div>
+                    <p>Arctic</p>
+                </div>
+            </a>
+
+            <a href="/listings/filters/Domes">
+                <div class="filter">
+                    <div><i class="fa-solid fa-landmark-dome"></i></div>
+                    <p>Domes</p>
+                </div>
+            </a>
+            <!-- <div class="filter">
                 <div><i class="fa-solid fa-sailboat"></i></div>
                 <p>Boats</p>
             </div>
@@ -102,29 +139,7 @@
             <div class="filter">
                 <div><i class="fa-solid fa-water"></i></div>
                 <p>Lakes</p>
-            </div>
-
-
-            <div class="filter">
-                <div><i class="fa-regular fa-snowflake"></i></div>
-                <p>Arctic</p>
-            </div>
-            <div class="filter">
-                <div><i class="fa-solid fa-landmark-dome"></i></div>
-                <p>Domes</p>
-            </div>
-            <div class="filter">
-                <div><i class="fa-solid fa-sailboat"></i></div>
-                <p>Boats</p>
-            </div>
-            <div class="filter">
-                <div><i class="fa-solid fa-tower-observation"></i></div>
-                <p>Towers</p>
-            </div>
-            <div class="filter">
-                <div><i class="fa-solid fa-water"></i></div>
-                <p>Lakes</p>
-            </div>
+            </div> -->
     
         </div>
         <div class="tax-toggle">
@@ -146,7 +161,7 @@
                         <b><%= listing.title %> </b><br/>
                         &#8377; <%= listing.price.toLocaleString("en-IN")%> / night
                         <i class="tax-info">&nbsp;&nbsp;+18% GST</i>
-                    </p>
+                      </p>
                     </div>
                 </div>
             </a>

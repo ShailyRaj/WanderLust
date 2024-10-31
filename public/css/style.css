@@ -208,3 +208,8 @@ body {
         width: 100% !important;
     }
 }
+
+/* New Form -> dropdown */
+.category-options {
+    margin: 10px 0 15px 0;
+}

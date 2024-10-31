@@ -3,7 +3,6 @@ const mbxGeocoding = require('@mapbox/mapbox-sdk/services/geocoding');
 const mapToken = process.env.MAP_TOKEN;
 const geocodingClient = mbxGeocoding({ accessToken: mapToken });
 
-
 module.exports.index = async(req, res) => {
     const allListings = await Listing.find({});
     res.render("listings/index.ejs", {allListings});
@@ -85,4 +84,19 @@ module.exports.destroyListing = async (req, res) => {
     console.log(deltedListing)
     req.flash("success", "Listing Deleted!")
     res.redirect("/listings");
+}
+
+
+// filters and search by location part
+
+module.exports.showFilterListings = async (req, res) => {
+    const { category } = req.params;
+    const listings = await Listing.find({ category });
+    res.render("listings/filter.ejs", {listings})
+}
+
+module.exports.showSearchListings = async (req, res) => {
+    const { location } = req.params;
+    const listings = await Listing.find({ location });
+    res.render("listings/search.ejs", {listings})
 }

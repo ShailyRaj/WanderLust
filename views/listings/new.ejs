@@ -22,6 +22,27 @@
                 <label for="image" class="form-label">Upload Listing Image</label>
                 <input name="listing[image]" type="file" class="form-control" required/>
             </div>
+
+            <!-- Category dropdown -> Bootstrap -->
+            <label>Select Category</label>
+            <select class="form-select category-options" name="listing[category]" aria-label="Default select example">
+                <option selected>Choose Catagory</option>
+                <option value="Trending">Trending</option>
+                <option value="Rooms">Rooms</option>
+                <option value="Iconic Cities">Iconic Cities</option>
+                <option value="Mountains">Mountains</option>
+                <option value="Castles">Castles</option>
+                <option value="Amazing Pools">Amazing Pools</option>
+                <option value="Camping">Camping</option>
+                <option value="Farms">Farms</option>
+                <option value="Arctic">Arctic</option>
+                <option value="Domes">Domes</option>
+                <option value="Boats">Boats</option>
+                <option value="Towers">Towers</option>
+                <option value="Lakes">Lakes</option>
+            </select>
+            <!-- Bootstrap end -->
+
             <div class="row">
                 <div class="mb-3 col-md-4">
                     <label for="price" class="form-label">Price</label>
